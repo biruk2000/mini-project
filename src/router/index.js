@@ -6,7 +6,7 @@ const history = createWebHistory();
 
 const routes = [
    {
-    //    path: '/home', component: Home
+       path: '/', component: Home
    }
 ]
 
