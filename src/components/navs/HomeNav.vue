@@ -1,6 +1,7 @@
 <template>
     <header>
         <Sidenav />
+
         <nav>
             <div class="nav">
                 <ul class="main-nav" id="my-nav" v-bind:class="{changeNav: isBgChanged}">
@@ -120,3 +121,4 @@ export default {
         }
      }
 </style>
+
