@@ -18,6 +18,16 @@
         </div>
 
         <div class="description">
+          <span>{{i.productName}}</span>
+        </div>
+
+        <div class="quantity">
+          <input type="number" name="name" v-model="i.quantity" @change="calculateTotal"  min="1" />
+        </div>
+
+        <div class="price">N{{i.price}}</div>
+
+        <div class="buttons" @click="removeItem(i)">
           <span>{{it.productName}}</span>
         </div>
 
