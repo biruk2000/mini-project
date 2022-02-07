@@ -26,6 +26,7 @@
         </div>
 
         <div class="price">N{{i.price}}</div>
+        <div class="price">N{{i.price}}</div>
 
         <div class="buttons" @click="removeItem(i)">
           <span>{{it.productName}}</span>
