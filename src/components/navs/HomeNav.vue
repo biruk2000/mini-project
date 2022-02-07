@@ -1,7 +1,6 @@
 <template>
     <header>
         <Sidenav />
-        <span>create conflict </span>
 
         <nav>
             <div class="nav">
@@ -122,3 +121,4 @@ export default {
         }
      }
 </style>
+

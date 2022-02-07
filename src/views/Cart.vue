@@ -12,22 +12,32 @@
       </div>
 
       <!-- Product #1 -->
-      <div class="item" v-for="item in items" :key="item.id">
+      <div class="item" v-for="it in items" :key="it.id">
         <div class="image">
           <img src="../assets/logo.png" alt="" />
         </div>
 
         <div class="description">
-          <span>{{item.productName}}</span>
+          <span>{{i.productName}}</span>
         </div>
 
         <div class="quantity">
-          <input type="number" name="name" v-model="item.quantity" @change="calculateTotal"  min="1" />
+          <input type="number" name="name" v-model="i.quantity" @change="calculateTotal"  min="1" />
         </div>
 
-        <div class="price">N{{item.price}}</div>
+        <div class="price">N{{i.price}}</div>
 
-        <div class="buttons" @click="removeItem(item)">
+        <div class="buttons" @click="removeItem(i)">
+          <span>{{it.productName}}</span>
+        </div>
+
+        <div class="quantity">
+          <input type="number" name="name" v-model="it.quantity" @change="calculateTotal"  min="1" />
+        </div>
+
+        <div class="price">N{{it.price}}</div>
+
+        <div class="buttons" @click="removeItem(it)">
           <span class="delete-btn">X</span>
         </div>
       </div>
@@ -86,8 +96,8 @@ export default {
      }
      this.totalPrice = total
    },
-   removeItem(item){
-     const index = this.items.findIndex(it => it.id === item.id);
+   removeItem(it){
+     const index = this.items.findIndex(it => it.id === it.id);
      this.items.splice(index,1);
      this.calculateTotal();
    }
