@@ -25,6 +25,7 @@
           <input type="number" name="name" v-model="it.quantity" @change="calculateTotal"  min="1" />
         </div>
 
+
         <div class="price">N{{it.price}}</div>
 
         <div class="buttons" @click="removeItem(i)">
