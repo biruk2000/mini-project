@@ -12,22 +12,22 @@
       </div>
 
       <!-- Product #1 -->
-      <div class="item" v-for="item in items" :key="item.id">
+      <div class="item" v-for="i in items" :key="i.id">
         <div class="image">
           <img src="../assets/logo.png" alt="" />
         </div>
 
         <div class="description">
-          <span>{{item.productName}}</span>
+          <span>{{i.productName}}</span>
         </div>
 
         <div class="quantity">
-          <input type="number" name="name" v-model="item.quantity" @change="calculateTotal"  min="1" />
+          <input type="number" name="name" v-model="i.quantity" @change="calculateTotal"  min="1" />
         </div>
 
-        <div class="price">N{{item.price}}</div>
+        <div class="price">N{{i.price}}</div>
 
-        <div class="buttons" @click="removeItem(item)">
+        <div class="buttons" @click="removeItem(i)">
           <span class="delete-btn">X</span>
         </div>
       </div>
