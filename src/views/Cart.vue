@@ -18,15 +18,15 @@
         </div>
 
         <div class="description">
-          <span>{{i.productName}}</span>
+          <span>{{it.productName}}</span>
         </div>
 
         <div class="quantity">
-          <input type="number" name="name" v-model="i.quantity" @change="calculateTotal"  min="1" />
+          <input type="number" name="name" v-model="it.quantity" @change="calculateTotal"  min="1" />
         </div>
 
-        <div class="price">N{{i.price}}</div>
-        <div class="price">N{{i.price}}</div>
+
+        <div class="price">N{{it.price}}</div>
 
         <div class="buttons" @click="removeItem(i)">
           <span>{{it.productName}}</span>
@@ -97,8 +97,8 @@ export default {
      }
      this.totalPrice = total
    },
-   removeItem(it){
-     const index = this.items.findIndex(it => it.id === it.id);
+   removeItem(item){
+     const index = this.items.findIndex(it => it.id === item.id);
      this.items.splice(index,1);
      this.calculateTotal();
    }
